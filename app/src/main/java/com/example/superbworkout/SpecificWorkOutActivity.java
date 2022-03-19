@@ -45,8 +45,6 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
         mTextViewCountDown = findViewById(R.id.timerTextView);
         mButtonStartPause = findViewById(R.id.startTimer);
         mButtonReset = findViewById(R.id.resetTimer);
-
-
         //TODO: content view stuff
         switch (intValue) {
             case 1:
