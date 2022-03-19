@@ -23,7 +23,7 @@ import java.security.Key;
 import java.util.Locale;
 
 public class SpecificWorkOutActivity extends YouTubeBaseActivity {
-    private  String button_value;
+    private String button_value;
     Button btn_play;
     YouTubePlayerView youTubePlayerView;
     YouTubePlayer.OnInitializedListener onInitializedListener;
@@ -32,64 +32,61 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     Button mButtonStartPause, mButtonReset;
     CountDownTimer mCountDownTimer;
     boolean mTimerRunning;
-    static final long START_TIME_INT_MILIS=600000;
-    long  mTimeLeftInMillis= START_TIME_INT_MILIS;
+    static final long START_TIME_INT_MILIS = 600000;
+    long mTimeLeftInMillis = START_TIME_INT_MILIS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            //TODO: set init
-            Intent intent =getIntent();
-            button_value=intent.getStringExtra("value");
-            int intValue=Integer.valueOf(button_value);
-            mTextViewCountDown=findViewById(R.id.timerTextView);
-            mButtonStartPause=findViewById(R.id.startTimer);
-            mButtonReset=findViewById(R.id.resetTimer);
+        super.onCreate(savedInstanceState);
+        //TODO: set init
+        Intent intent = getIntent();
+        button_value = intent.getStringExtra("value");
+        int intValue = Integer.valueOf(button_value);
+        mTextViewCountDown = findViewById(R.id.timerTextView);
+        mButtonStartPause = findViewById(R.id.startTimer);
+        mButtonReset = findViewById(R.id.resetTimer);
 
 
-
-
-            //TODO: content view stuff
-            switch (intValue)
-            {
-                case 1:
-                    setContentView(R.layout.activity_workout1);
-                    initVideo("lvaQcFaxL00");
-                    break;
-                case 2:
-                    setContentView(R.layout.activity_workout2);
-                    initVideo("asdas");
-                    break;
-                case 3:
-                    setContentView(R.layout.activity_workout3);
-                    break;
-                case 4:
-                    setContentView(R.layout.activity_workout4);
-                    break;
-                case 5:
-                    setContentView(R.layout.activity_workout5);
-                    break;
-                case 6:
-                    setContentView(R.layout.activity_workout6);
-                    break;
-                case 7:
-                    setContentView(R.layout.activity_workout7);
-                    break;
-                case 8:
-                    setContentView(R.layout.activity_workout8);
-                    break;
-                case 9:
-                    setContentView(R.layout.activity_workout9);
-                    break;
-                case 10:
-                    setContentView(R.layout.activity_workout10);
-                    break;
-            }
+        //TODO: content view stuff
+        switch (intValue) {
+            case 1:
+                setContentView(R.layout.activity_workout1);
+                initVideo("lvaQcFaxL00");
+                break;
+            case 2:
+                setContentView(R.layout.activity_workout2);
+                initVideo("asdas");
+                break;
+            case 3:
+                setContentView(R.layout.activity_workout3);
+                break;
+            case 4:
+                setContentView(R.layout.activity_workout4);
+                break;
+            case 5:
+                setContentView(R.layout.activity_workout5);
+                break;
+            case 6:
+                setContentView(R.layout.activity_workout6);
+                break;
+            case 7:
+                setContentView(R.layout.activity_workout7);
+                break;
+            case 8:
+                setContentView(R.layout.activity_workout8);
+                break;
+            case 9:
+                setContentView(R.layout.activity_workout9);
+                break;
+            case 10:
+                setContentView(R.layout.activity_workout10);
+                break;
+        }
     }
-    public void initVideo(String vidSource)
-    {
+
+    public void initVideo(String vidSource) {
         //TODO: set video
-        btn_play=findViewById(R.id.play);
+        btn_play = findViewById(R.id.play);
         youTubePlayerView = findViewById(R.id.YouTubePlayerView);
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             @Override
@@ -106,22 +103,19 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                youTubePlayerView.initialize("AIzaSyBmCZcbsTG_oRapQY_umryk5-Ses6dBQXs",onInitializedListener);
+                youTubePlayerView.initialize("AIzaSyBmCZcbsTG_oRapQY_umryk5-Ses6dBQXs", onInitializedListener);
             }
         });
     }
+
     //TODO: timer configuration
-    public void timerInit( )
-    {
+    public void timerInit() {
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mTimerRunning)
-                {
+                if (mTimerRunning) {
                     pauseTimer();
-                }
-                else
-                {
+                } else {
                     startTimer();
                 }
             }
@@ -132,56 +126,53 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
                 resetTimer();
             }
         });
-    updateCountDownText();
+        updateCountDownText();
     }
-    private void startTimer()
-    {
-        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis,1000) {
+
+    private void startTimer() {
+        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
             @Override
             public void onTick(long l) {
-                mTimeLeftInMillis=l;
+                mTimeLeftInMillis = l;
                 updateCountDownText();
             }
 
             @Override
             public void onFinish() {
-                mTimerRunning=false;
+                mTimerRunning = false;
                 mButtonStartPause.setText("Start");
                 mButtonReset.setVisibility(View.VISIBLE);
                 mButtonStartPause.setVisibility(View.INVISIBLE);
 
             }
         }.start();
-        mTimerRunning=true;
+        mTimerRunning = true;
         mButtonStartPause.setText("Pause");
         mButtonReset.setVisibility(View.INVISIBLE);
 
 
     }
-    private void pauseTimer()
-    {
+
+    private void pauseTimer() {
         mCountDownTimer.cancel();
-        mTimerRunning=false;
+        mTimerRunning = false;
         mButtonStartPause.setText("Start");
         mButtonReset.setVisibility(View.VISIBLE);
     }
 
 
-    private void resetTimer()
-    {
-        mTimeLeftInMillis=START_TIME_INT_MILIS;
+    private void resetTimer() {
+        mTimeLeftInMillis = START_TIME_INT_MILIS;
         updateCountDownText();
-        mButtonReset.setVisibility(View.INVISIBLE );
+        mButtonReset.setVisibility(View.INVISIBLE);
         mButtonStartPause.setVisibility(View.VISIBLE);
     }
 
 
-
-    public void updateCountDownText()
-    {
-        int minutes=(int)(mTimeLeftInMillis/1000)/60;
-        int seconds=(int)(mTimeLeftInMillis/1000)%60;
-        String timeLeftFormat = String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds);
+    public void updateCountDownText() {
+        int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
+        int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
+        String timeLeftFormat = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormat);
     }
 
