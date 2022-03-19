@@ -32,7 +32,7 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     Button mButtonStartPause, mButtonReset;
     CountDownTimer mCountDownTimer;
     boolean mTimerRunning;
-    static final long START_TIME_INT_MILIS = 600000;
+    static final long START_TIME_INT_MILIS = 60000;
     long mTimeLeftInMillis = START_TIME_INT_MILIS;
 
     @Override
@@ -42,14 +42,12 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
         Intent intent = getIntent();
         button_value = intent.getStringExtra("value");
         int intValue = Integer.valueOf(button_value);
-        mTextViewCountDown = findViewById(R.id.timerTextView);
-        mButtonStartPause = findViewById(R.id.startTimer);
-        mButtonReset = findViewById(R.id.resetTimer);
         //TODO: content view stuff
         switch (intValue) {
             case 1:
                 setContentView(R.layout.activity_workout1);
                 initVideo("lvaQcFaxL00");
+                timerInit();
                 break;
             case 2:
                 setContentView(R.layout.activity_workout2);
@@ -90,7 +88,6 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 youTubePlayer.loadVideo(vidSource);
-                Toast.makeText(SpecificWorkOutActivity.this, "VIDEO LOADED SUCCESSFULLY", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -107,7 +104,10 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     }
 
     //TODO: timer configuration
-    public void timerInit() {
+    private void timerInit() {
+        mTextViewCountDown = findViewById(R.id.timerTextView);
+        mButtonStartPause = findViewById(R.id.startTimer);
+        mButtonReset = findViewById(R.id.resetTimer);
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
