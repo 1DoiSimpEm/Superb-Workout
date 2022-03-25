@@ -5,220 +5,217 @@
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgg"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/arrow_right2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_routine"
+        android:layout_width="379dp"
+        android:layout_height="113dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline25">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/main_gif3"
-        android:layout_width="318dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="21dp"
-        android:src="@drawable/fit"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toStartOf="@+id/main_gif"
-        app:layout_constraintTop_toBottomOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="0.125" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_shadow_end_color"
+            android:backgroundTintMode="@color/cardview_shadow_end_color">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintGuide_begin="51dp"
-        app:layout_constraintTop_toBottomOf="@+id/guideline14" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:src="@drawable/workout_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="411dp"
-        android:layout_marginBottom="149dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="200dp"
-        app:layout_constraintTop_toBottomOf="@+id/guideline9" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="20dp"
+                android:text="Can't live without food"
+                android:textColor="#76FF03"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/main_gif3"
-        app:layout_constraintGuide_begin="349dp"
-        app:layout_constraintTop_toBottomOf="@+id/guideline10" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Routine"
+            android:textAlignment="center"
+            android:textColor="#403737"
+            android:textSize="35sp" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline13"
+        android:id="@+id/guideline26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="141dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline15"
-        app:layout_constraintGuide_begin="501dp"
-        app:layout_constraintTop_toBottomOf="@+id/main_gif3" />
+        app:layout_constraintGuide_begin="609dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="45dp"
-        android:layout_height="42dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="477dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="278dp" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="bottom"
+        app:itemBackground="@color/teal_200"
+        app:itemIconTint="@drawable/serlector"
+        app:itemTextColor="@drawable/serlector"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline16"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:srcCompat="@drawable/splash_icon" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:hint="Developed by Viet Pham ©"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/workout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
-        android:text="Working Out Exercises"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="60 days"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/workout" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:text="Everyday 30 minutes"
-        android:textColor="#FD0000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/main_gif"
-        android:layout_width="127dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/eating"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/main_gif2"
-        android:layout_width="109dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/gym"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_begin="643dp"
-        app:layout_constraintTop_toBottomOf="@+id/guideline13" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="88dp"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/arrow_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_start1"
-        android:layout_width="344dp"
-        android:layout_height="48dp"
-
-        android:background="@drawable/button_bg"
-        android:text="Get Started"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:menu="@menu/menu">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_start2"
-        android:layout_width="344dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_bg"
-        android:text="Get Started"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:visibility="visible"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_excersise"
+        android:layout_width="379dp"
+        android:layout_height="113dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintTop_toTopOf="@+id/guideline24">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_shadow_end_color">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:src="@drawable/exersice_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv262"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Excersises"
+                android:textAlignment="center"
+                android:textColor="#403737"
+                android:textSize="35sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="20dp"
+                android:text="Daily Workout"
+                android:textColor="#76FF03"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="404dp"
+        android:layout_height="275dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/milos2" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="206dp"
+                android:layout_height="184dp"
+                android:layout_marginStart="-30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/chad" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView9"
+                android:layout_width="264dp"
+                android:layout_height="165dp"
+                android:src="@drawable/milos3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="casual"
+                android:text="Motivation to get a healthy life is below"
+                android:textColor="#590808"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

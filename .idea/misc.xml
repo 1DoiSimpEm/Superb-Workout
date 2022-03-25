@@ -6,10 +6,17 @@
         <entry key="..\:/SuperbWorkout/app/src/main/res/drawable-v24/background_crop.xml" value="0.1435" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/drawable-v24/button_bg.xml" value="0.1435" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1435" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/backgroubd.xml" value="0.134" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/background_crop.xml" value="0.1435" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/button_bg.xml" value="0.12" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.1" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1435" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/pacific_dream.xml" value="0.134" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/selector.xml" value="0.1" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/drawable/serlector.xml" value="0.128" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/font/font.xml" value="0.26666666666666666" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_about.xml" value="0.67" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_main2.xml" value="0.259375" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_meal.xml" value="0.259375" />
@@ -27,7 +34,11 @@
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_workout7.xml" value="0.259375" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_workout8.xml" value="0.259375" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/activity_workout9.xml" value="0.259375" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/layout/calendar_cell.xml" value="0.15" />
         <entry key="..\:/SuperbWorkout/app/src/main/res/layout/exercises_list_item.xml" value="0.259375" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/layout/selector.xml" value="0.1" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/menu/menu.xml" value="0.33" />
+        <entry key="..\:/SuperbWorkout/app/src/main/res/menu/navigation.xml" value="0.209375" />
       </map>
     </option>
   </component>

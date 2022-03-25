@@ -51,10 +51,12 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
                 break;
             case 2:
                 setContentView(R.layout.activity_workout2);
-                initVideo("asdas");
+                initVideo("Xyd_fa5zoEU");
+                timerInit();
                 break;
             case 3:
                 setContentView(R.layout.activity_workout3);
+                timerInit();
                 break;
             case 4:
                 setContentView(R.layout.activity_workout4);
@@ -80,7 +82,7 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
         }
     }
 
-    public void initVideo(String vidSource) {
+    private void initVideo(String vidSource) {
         //TODO: set video
         btn_play = findViewById(R.id.play);
         youTubePlayerView = findViewById(R.id.YouTubePlayerView);
@@ -93,12 +95,14 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
                 Toast.makeText(SpecificWorkOutActivity.this, "CAN'T LOAD VIDEO", Toast.LENGTH_LONG).show();
+                btn_play.setVisibility(View.VISIBLE);
             }
         };
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 youTubePlayerView.initialize("AIzaSyBmCZcbsTG_oRapQY_umryk5-Ses6dBQXs", onInitializedListener);
+                btn_play.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -167,7 +171,7 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     }
 
 
-    public void updateCountDownText() {
+    private void updateCountDownText() {
         int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
         String timeLeftFormat = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
