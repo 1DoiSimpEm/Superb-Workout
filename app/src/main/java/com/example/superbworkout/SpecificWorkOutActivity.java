@@ -32,7 +32,7 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     Button mButtonStartPause, mButtonReset;
     CountDownTimer mCountDownTimer;
     boolean mTimerRunning;
-    static final long START_TIME_INT_MILIS = 60000;
+    static final long START_TIME_INT_MILIS = 6000;
     long mTimeLeftInMillis = START_TIME_INT_MILIS;
 
     @Override
@@ -56,28 +56,43 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
                 break;
             case 3:
                 setContentView(R.layout.activity_workout3);
+                initVideo("dl8_opV0A0Y");
                 timerInit();
                 break;
             case 4:
                 setContentView(R.layout.activity_workout4);
+                initVideo("dl8_opV0A0Y");
+                timerInit();
                 break;
             case 5:
                 setContentView(R.layout.activity_workout5);
+                initVideo("dl8_opV0A0Y");
+                timerInit();
                 break;
             case 6:
                 setContentView(R.layout.activity_workout6);
+                initVideo("dl8_opV0A0Y");
+                timerInit();
                 break;
             case 7:
                 setContentView(R.layout.activity_workout7);
+                initVideo("GN8EA9mpkdY");
+                timerInit();
                 break;
             case 8:
                 setContentView(R.layout.activity_workout8);
+                initVideo("GN8EA9mpkdY");
+                timerInit();
                 break;
             case 9:
                 setContentView(R.layout.activity_workout9);
+                initVideo("GN8EA9mpkdY");
+                timerInit();
                 break;
             case 10:
                 setContentView(R.layout.activity_workout10);
+                initVideo("GN8EA9mpkdY");
+                timerInit();
                 break;
         }
     }

@@ -60,5 +60,6 @@ public class About extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW,uri));
             }
         });
+
     }
 }

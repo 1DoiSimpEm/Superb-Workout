@@ -5,7 +5,7 @@
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgg"
+    android:background="#FFFF"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -54,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Routine"
+            android:layout_marginLeft="10dp"
             android:textAlignment="center"
             android:textColor="#403737"
             android:textSize="35sp" />
@@ -87,7 +88,7 @@
         android:layout_height="50dp"
         app:flow_horizontalAlign="center"
         app:flow_verticalAlign="bottom"
-        app:itemBackground="@color/teal_200"
+        app:itemBackground="@color/color1"
         app:itemIconTint="@drawable/serlector"
         app:itemTextColor="@drawable/serlector"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,13 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.ProgressBar;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     public void startWorkout(View view) {
         Intent intent = new Intent(MainActivity.this, WorkoutActivity.class);
         startActivity(intent);
+
     }
 
     public void startMeal(View view) {

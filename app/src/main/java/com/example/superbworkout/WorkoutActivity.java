@@ -27,7 +27,10 @@ public class WorkoutActivity extends AppCompatActivity {
 
 
     }
-
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+    }
     public void ImageButtonClicked(View view) {
         for(int i=0;i<poses.length;i++)
         {
