@@ -25,42 +25,29 @@ import java.util.Calendar;
 
 public class MealActivity extends AppCompatActivity
 {
-
-
     BottomNavigationView bottomNavigationView;
-    private CalendarView calendarView;
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal);
-        calendarView=(CalendarView) findViewById(R.id.calendarView);
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                String date =  i+"/"+i1+"/"+i2;
-
-            }
-        });
-        bottomNavigationView =findViewById(R.id.bottom_navigator);
+        bottomNavigationView = findViewById(R.id.bottom_navigator);
         bottomNavigationView.setSelectedItemId(R.id.routine);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.routine:
                         return true;
                     case R.id.info:
-                        startActivity(new Intent(getApplicationContext(),About.class));
+                        startActivity(new Intent(getApplicationContext(), About.class));
                         return true;
                     case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         return true;
                 }
                 return false;
             }
         });
     }
-
 }
 
 

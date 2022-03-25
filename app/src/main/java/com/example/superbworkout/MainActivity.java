@@ -31,11 +31,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startMeal(View view) {
-        Intent intent = new Intent(MainActivity.this, MealActivity.class);
+        Intent intent = new Intent(MainActivity.this, RoutineActivity.class);
         startActivity(intent);
     }
-
-
 
 
     private void initiation() {
