@@ -11,6 +11,7 @@ import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -191,6 +192,7 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
         String timeLeftFormat = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timeLeftFormat);
+
     }
 
 }

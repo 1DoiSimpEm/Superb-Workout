@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginLeft="85dp"
+                android:layout_marginLeft="80dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -72,19 +72,20 @@
                     tools:visibility="visible" />
 
             </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="#ECEDE8"
-                android:layout_marginBottom="10dp">
+                app:cardCornerRadius="20dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
                     android:background="#ECEDE8"
                     android:orientation="horizontal">
 
@@ -94,9 +95,7 @@
                         android:background="#ECEDE8"
                         android:text="@string/pose1"
                         android:textColor="@color/black"
-                        android:textSize="18dp"/>
-
-
+                        android:textSize="18dp" />
 
 
                 </LinearLayout>
