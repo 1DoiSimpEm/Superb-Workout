@@ -2,6 +2,7 @@ package com.example.superbworkout;
 
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -9,18 +10,23 @@ import android.content.Intent;
 import android.graphics.Color;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class RoutineActivity extends AppCompatActivity {
 
     float height,weight;
     TextView height_txt,age;
-    int count_weight = 50,count_age = 19;
+    ImageView btn_backtomain;
+    int count_weight = 50,count_age = 18;
     RelativeLayout weight_plus, weight_minus, age_plus, age_minus;
     boolean male_clk = true, female_clk = true, check1 = true, check2 = true;
 
@@ -42,6 +48,14 @@ public class RoutineActivity extends AppCompatActivity {
 
         weight_minus = (RelativeLayout)findViewById(R.id.weight_minus);
         weight_plus =(RelativeLayout) findViewById(R.id.weight_plus);
+
+        btn_backtomain=findViewById(R.id.btn_back);
+     btn_backtomain.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             startActivity(new Intent(getApplicationContext(),MainActivity.class));
+         }
+     });
 
         card_male.setOnClickListener(new View.OnClickListener() {
             @Override
