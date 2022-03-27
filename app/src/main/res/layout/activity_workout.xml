@@ -29,7 +29,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/box_color">
 
                     <LinearLayout
                         android:id="@+id/pose1"
@@ -52,7 +53,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Mountain Climber"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -61,6 +62,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -191,7 +193,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/box_color">
 
                     <LinearLayout
                         android:id="@+id/pose3"
@@ -214,7 +217,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Bench Dips"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -223,6 +226,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -353,7 +357,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/box_color">
 
                     <LinearLayout
                         android:id="@+id/pose5"
@@ -376,7 +381,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Leg raise"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -385,6 +390,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -515,7 +521,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/box_color">
 
                     <LinearLayout
                         android:id="@+id/pose7"
@@ -538,7 +545,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Tuck and crunch"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -547,6 +554,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -677,7 +685,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/box_color">
 
                     <LinearLayout
                         android:id="@+id/pose9"
@@ -700,7 +709,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Russian Twist"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -709,6 +718,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView

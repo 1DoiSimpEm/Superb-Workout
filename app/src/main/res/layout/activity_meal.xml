@@ -5,7 +5,7 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgg"
+    android:background="@color/bg_color"
     android:orientation="vertical"
     tools:context=".MealActivity">
 
@@ -24,17 +24,22 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigator"
         android:layout_width="409dp"
         android:layout_height="50dp"
-        app:itemBackground="@color/teal_200"
+        app:flow_horizontalAlign="center"
+        android:background="#40444b"
+        app:flow_verticalAlign="bottom"
+        app:itemBackground="@color/navi_color"
         app:itemIconTint="@drawable/serlector"
         app:itemTextColor="@drawable/serlector"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager2"
@@ -48,12 +53,14 @@
         app:layout_constraintTop_toBottomOf="@+id/viewPager"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/order_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:background="#b1b3b7"
         android:text="Order now"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -5,14 +5,14 @@
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFF"
+    android:background="@color/bg_color"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview_routine"
         android:layout_width="379dp"
         android:layout_height="113dp"
-        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardBackgroundColor="@color/box_color"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
             android:layout_marginLeft="10dp"
             android:text="BMI Calculator"
             android:textAlignment="center"
-            android:textColor="#403737"
+            android:textColor="#FB0000"
             android:textSize="35sp" />
     </androidx.cardview.widget.CardView>
 
@@ -87,8 +87,9 @@
         android:layout_width="409dp"
         android:layout_height="50dp"
         app:flow_horizontalAlign="center"
+        android:background="#40444b"
         app:flow_verticalAlign="bottom"
-        app:itemBackground="@color/color1"
+        app:itemBackground="@color/navi_color"
         app:itemIconTint="@drawable/serlector"
         app:itemTextColor="@drawable/serlector"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +103,7 @@
         android:id="@+id/cardview_excersise"
         android:layout_width="379dp"
         android:layout_height="113dp"
-        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardBackgroundColor="@color/box_color"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +132,7 @@
                 android:layout_marginStart="5dp"
                 android:text="Excersises"
                 android:textAlignment="center"
-                android:textColor="#403737"
+                android:textColor="#F60000"
                 android:textSize="35sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -163,7 +164,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="404dp"
         android:layout_height="275dp"
-        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardBackgroundColor="@color/box_color"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -207,7 +208,7 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="casual"
                 android:text="Motivation to get a healthy life is below"
-                android:textColor="#590808"
+                android:textColor="#EAD70C"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
