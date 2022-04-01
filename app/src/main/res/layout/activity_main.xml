@@ -29,8 +29,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="136dp"
-                android:src="@drawable/workout_calendar"
+                android:layout_marginStart="132dp"
+                android:src="@drawable/bmi_of"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -43,7 +43,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="20dp"
                 android:text="Don't know if you are fat or thin?"
-                android:textColor="#76FF03"
+                android:textColor="#858578"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
             android:layout_marginLeft="10dp"
             android:text="BMI Calculator"
             android:textAlignment="center"
-            android:textColor="#FB0000"
+            android:textColor="#FFFFFF"
             android:textSize="35sp" />
     </androidx.cardview.widget.CardView>
 
@@ -132,7 +132,7 @@
                 android:layout_marginStart="5dp"
                 android:text="Excersises"
                 android:textAlignment="center"
-                android:textColor="#F60000"
+                android:textColor="#FFFFFF"
                 android:textSize="35sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -151,7 +151,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="20dp"
                 android:text="Daily Workout"
-                android:textColor="#76FF03"
+                android:textColor="#858578"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -196,6 +196,7 @@
                 android:id="@+id/imageView9"
                 android:layout_width="264dp"
                 android:layout_height="165dp"
+                android:layout_marginBottom="-50dp"
                 android:src="@drawable/milos3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

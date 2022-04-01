@@ -112,6 +112,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:background="#40444b"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -135,7 +136,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Basic Crunches"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -143,6 +144,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/white"
                                 android:text="Repeat three times"
                                 android:textStyle="bold" />
 
@@ -275,6 +277,7 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
+                    android:background="#40444b"
                     android:layout_gravity="center"
                     android:orientation="vertical">
 
@@ -299,7 +302,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Bicylcle Crunches"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -308,6 +311,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -440,6 +444,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:background="#40444b"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -463,7 +468,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Alternative heel touch"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -472,6 +477,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -604,6 +610,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:background="#40444b"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -611,6 +618,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+
                         android:onClick="ImageButtonClicked"
                         android:orientation="horizontal">
 
@@ -627,7 +635,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Advanced crunches"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -636,6 +644,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Repeat three times"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -767,6 +776,7 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
+                    android:background="#40444b"
                     android:layout_gravity="center"
                     android:orientation="vertical">
 
@@ -791,7 +801,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Plank"
                                 android:textAllCaps="true"
-                                android:textColor="#ff000000"
+                                android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -799,6 +809,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/white"
                                 android:text="Repeat three times"
                                 android:textStyle="bold" />
 

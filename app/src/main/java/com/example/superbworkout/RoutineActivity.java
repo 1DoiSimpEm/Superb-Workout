@@ -66,7 +66,7 @@ public class RoutineActivity extends AppCompatActivity {
 
                     if (male_clk) {
 
-                        male_text.setTextColor(Color.parseColor("#FFFFFF"));
+                        male_text.setTextColor(Color.parseColor("#02a3fe"));
                         male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male_white,0,0);
                         male_clk = false;
                         check2 = false;
@@ -87,7 +87,7 @@ public class RoutineActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (check2) {
                     if (female_clk) {
-                        female_text.setTextColor(Color.parseColor("#FFFFFF"));
+                        female_text.setTextColor(Color.parseColor("#ec49a6"));
                         female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female_white,0,0);
                         female_clk = false;
                         check1 = false;

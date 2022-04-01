@@ -21,7 +21,6 @@ public class About extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-
         fb_link=findViewById(R.id.fb_link);
         discord_link=findViewById(R.id.discord_link);
         git_link=findViewById(R.id.git_link);
