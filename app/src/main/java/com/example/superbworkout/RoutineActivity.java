@@ -37,68 +37,57 @@ public class RoutineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_routine);
 
-        height_txt = (TextView) findViewById(R.id.height_txt);
+        height_txt = findViewById(R.id.height_txt);
 
-        final TextView female_text = (TextView) findViewById(R.id.female);
-        final TextView male_text = (TextView) findViewById(R.id.male);
+        final TextView female_text = findViewById(R.id.female);
+        final TextView male_text = findViewById(R.id.male);
 
-        CardView card_female = (CardView) findViewById(R.id.cardView_female);
-        CardView card_male = (CardView) findViewById(R.id.cardView_male);
+        CardView card_female = findViewById(R.id.cardView_female);
+        CardView card_male = findViewById(R.id.cardView_male);
 
-        age_minus = (RelativeLayout) findViewById(R.id.age_minus);
-        age_plus = (RelativeLayout) findViewById(R.id.age_plus);
+        age_minus = findViewById(R.id.age_minus);
+        age_plus = findViewById(R.id.age_plus);
 
-        weight_minus = (RelativeLayout)findViewById(R.id.weight_minus);
-        weight_plus =(RelativeLayout) findViewById(R.id.weight_plus);
+        weight_minus = findViewById(R.id.weight_minus);
+        weight_plus = findViewById(R.id.weight_plus);
 
         btn_backtomain=findViewById(R.id.btn_back);
-     btn_backtomain.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
-             startActivity(new Intent(getApplicationContext(),MainActivity.class));
-         }
-     });
+     btn_backtomain.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),MainActivity.class)));
 
-        card_male.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (check1) {
+        card_male.setOnClickListener(v -> {
+            if (check1) {
 
-                    if (male_clk) {
+                if (male_clk) {
 
-                        male_text.setTextColor(Color.parseColor("#02a3fe"));
-                        male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male_white,0,0);
-                        male_clk = false;
-                        check2 = false;
+                    male_text.setTextColor(Color.parseColor("#02a3fe"));
+                    male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male_white,0,0);
+                    male_clk = false;
+                    check2 = false;
 
-                    } else {
+                } else {
 
-                        male_text.setTextColor(Color.parseColor("#8D8E99"));
-                        male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male,0,0);
-                        male_clk = true;
-                        check2 = true;
-                    }
+                    male_text.setTextColor(Color.parseColor("#8D8E99"));
+                    male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male,0,0);
+                    male_clk = true;
+                    check2 = true;
                 }
             }
         });
 
-        card_female.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (check2) {
-                    if (female_clk) {
-                        female_text.setTextColor(Color.parseColor("#ec49a6"));
-                        female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female_white,0,0);
-                        female_clk = false;
-                        check1 = false;
-                    }
-                    else  {
+        card_female.setOnClickListener(v -> {
+            if (check2) {
+                if (female_clk) {
+                    female_text.setTextColor(Color.parseColor("#ec49a6"));
+                    female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female_white,0,0);
+                    female_clk = false;
+                    check1 = false;
+                }
+                else  {
 
-                        female_text.setTextColor(Color.parseColor("#8D8E99"));
-                        female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female,0,0);
-                        female_clk = true;
-                        check1 = true;
-                    }
+                    female_text.setTextColor(Color.parseColor("#8D8E99"));
+                    female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female,0,0);
+                    female_clk = true;
+                    check1 = true;
                 }
             }
         });
@@ -124,20 +113,14 @@ public class RoutineActivity extends AppCompatActivity {
 
         age = findViewById(R.id.age);
 
-        age_plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count_age++;
-                age.setText(String.valueOf(count_age));
-            }
+        age_plus.setOnClickListener(v -> {
+            count_age++;
+            age.setText(String.valueOf(count_age));
         });
 
-        age_minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count_age--;
-                age.setText(String.valueOf(count_age));
-            }
+        age_minus.setOnClickListener(v -> {
+            count_age--;
+            age.setText(String.valueOf(count_age));
         });
     }
 
@@ -145,20 +128,14 @@ public class RoutineActivity extends AppCompatActivity {
 
         final TextView weight_txt = findViewById(R.id.weight);
 
-        weight_plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count_weight++;
-                weight_txt.setText(String.valueOf(count_weight));
-            }
+        weight_plus.setOnClickListener(v -> {
+            count_weight++;
+            weight_txt.setText(String.valueOf(count_weight));
         });
 
-        weight_minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count_weight--;
-                weight_txt.setText(String.valueOf(count_weight));
-            }
+        weight_minus.setOnClickListener(v -> {
+            count_weight--;
+            weight_txt.setText(String.valueOf(count_weight));
         });
 
         weight = Float.parseFloat(weight_txt.getText().toString());

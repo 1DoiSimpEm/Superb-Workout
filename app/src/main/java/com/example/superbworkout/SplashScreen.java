@@ -34,12 +34,9 @@ public class SplashScreen extends AppCompatActivity {
         textView.setAnimation(down);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
         },3500);
     }
 }

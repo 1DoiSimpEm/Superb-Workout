@@ -38,7 +38,6 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     YouTubePlayer.OnInitializedListener onInitializedListener;
     MediaPlayer ringPlayer;
     CardView timer_cardview;
-    //second timer variable
 
     int myProgress = 0;
     ProgressBar progressBarView;
@@ -129,12 +128,9 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
                 btn_play.setVisibility(View.VISIBLE);
             }
         };
-        btn_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                youTubePlayerView.initialize("AIzaSyBmCZcbsTG_oRapQY_umryk5-Ses6dBQXs", onInitializedListener);
-                btn_play.setVisibility(View.INVISIBLE);
-            }
+        btn_play.setOnClickListener(view -> {
+            youTubePlayerView.initialize("AIzaSyBmCZcbsTG_oRapQY_umryk5-Ses6dBQXs", onInitializedListener);
+            btn_play.setVisibility(View.INVISIBLE);
         });
     }
 
@@ -142,9 +138,9 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
     private void timerInit(String times)
     {
 
-        progressBarView = (ProgressBar) findViewById(R.id.view_progress_bar);
-        btn_start = (Button)findViewById(R.id.btn_start);
-        tv_time= (TextView)findViewById(R.id.tv_timer);
+        progressBarView = findViewById(R.id.view_progress_bar);
+        btn_start = findViewById(R.id.btn_start);
+        tv_time= findViewById(R.id.tv_timer);
 
 
 
@@ -156,12 +152,9 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
         progressBarView.setProgress(0);
 
 
-        btn_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fn_countdown(times);
-                btn_start.setVisibility(View.INVISIBLE);
-            }
+        btn_start.setOnClickListener(v -> {
+            fn_countdown(times);
+            btn_start.setVisibility(View.INVISIBLE);
         });
     }
     private void fn_countdown(String times) {
@@ -204,8 +197,8 @@ public class SpecificWorkOutActivity extends YouTubeBaseActivity {
                 @Override
                 public void onFinish() {
                     setProgress(progress, endTime);
-                    btn_start.setVisibility(View.VISIBLE);
                     ringPlayer.start();
+                    btn_start.setVisibility(View.VISIBLE);
 
                 }
             };

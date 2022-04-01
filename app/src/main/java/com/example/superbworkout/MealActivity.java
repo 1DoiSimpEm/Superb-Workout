@@ -40,21 +40,18 @@ public class MealActivity extends AppCompatActivity
 
         bottomNavigationView = findViewById(R.id.bottom_navigator);
         bottomNavigationView.setSelectedItemId(R.id.routine);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.routine:
-                        return true;
-                    case R.id.info:
-                        startActivity(new Intent(getApplicationContext(), About.class));
-                        return true;
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        return true;
-                }
-                return false;
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.routine:
+                    return true;
+                case R.id.info:
+                    startActivity(new Intent(getApplicationContext(), About.class));
+                    return true;
+                case R.id.home:
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    return true;
             }
+            return false;
         });
 
 
