@@ -49,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.routine:
                     startActivity(new Intent(getApplicationContext(),MealActivity.class));
+                    overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                     return true;
                 case R.id.info:
                     startActivity(new Intent(getApplicationContext(),About.class));
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     return true;
                 case R.id.home:
                     return true;

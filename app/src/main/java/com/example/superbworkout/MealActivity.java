@@ -46,9 +46,11 @@ public class MealActivity extends AppCompatActivity
                     return true;
                 case R.id.info:
                     startActivity(new Intent(getApplicationContext(), About.class));
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     return true;
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     return true;
             }
             return false;

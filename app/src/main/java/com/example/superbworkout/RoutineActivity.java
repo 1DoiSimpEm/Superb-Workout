@@ -52,7 +52,13 @@ public class RoutineActivity extends AppCompatActivity {
         weight_plus = findViewById(R.id.weight_plus);
 
         btn_backtomain=findViewById(R.id.btn_back);
-     btn_backtomain.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),MainActivity.class)));
+     btn_backtomain.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             startActivity(new Intent(getApplicationContext(),MainActivity.class));
+             overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+         }
+     });
 
         card_male.setOnClickListener(v -> {
             if (check1) {

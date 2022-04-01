@@ -32,11 +32,13 @@ public class About extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.routine:
                         startActivity(new Intent(getApplicationContext(),MealActivity.class));
+                        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                         return true;
                     case R.id.info:
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
                         return true;
                 }
                 return false;
