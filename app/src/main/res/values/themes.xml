@@ -29,7 +29,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item  name="android:windowBackground">@drawable/de_rock</item>
 
+    </style>
     <style name="Theme.SuperbWorkout.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SuperbWorkout.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

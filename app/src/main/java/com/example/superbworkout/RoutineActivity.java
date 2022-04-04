@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -30,7 +31,7 @@ public class RoutineActivity extends AppCompatActivity {
     ImageView btn_backtomain;
     int count_weight = 50,count_age = 18;
     RelativeLayout weight_plus, weight_minus, age_plus, age_minus;
-    boolean male_clk = true, female_clk = true, check1 = true, check2 = true;
+    boolean male_clk = true, female_clk = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,50 +53,46 @@ public class RoutineActivity extends AppCompatActivity {
         weight_plus = findViewById(R.id.weight_plus);
 
         btn_backtomain=findViewById(R.id.btn_back);
-     btn_backtomain.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
-             startActivity(new Intent(getApplicationContext(),MainActivity.class));
-             overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
-         }
+     btn_backtomain.setOnClickListener(view -> {
+         startActivity(new Intent(getApplicationContext(),MainActivity.class));
+         overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
      });
 
         card_male.setOnClickListener(v -> {
-            if (check1) {
-
-                if (male_clk) {
-
+                if (male_clk ) {
                     male_text.setTextColor(Color.parseColor("#02a3fe"));
                     male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male_white,0,0);
                     male_clk = false;
-                    check2 = false;
+                    female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female,0,0);
+                    female_text.setTextColor(Color.parseColor("#8D8E99"));
+                    female_clk = true;
 
                 } else {
 
                     male_text.setTextColor(Color.parseColor("#8D8E99"));
                     male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male,0,0);
                     male_clk = true;
-                    check2 = true;
+
                 }
-            }
         });
 
         card_female.setOnClickListener(v -> {
-            if (check2) {
-                if (female_clk) {
+
+                if (female_clk ) {
                     female_text.setTextColor(Color.parseColor("#ec49a6"));
                     female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female_white,0,0);
                     female_clk = false;
-                    check1 = false;
+                    male_text.setTextColor(Color.parseColor("#8D8E99"));
+                    male_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.male,0,0);
+                    male_clk = true;
+
                 }
                 else  {
 
                     female_text.setTextColor(Color.parseColor("#8D8E99"));
                     female_text.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.female,0,0);
                     female_clk = true;
-                    check1 = true;
                 }
-            }
         });
 
         CheckSeekbarStatus();
@@ -172,7 +169,6 @@ public class RoutineActivity extends AppCompatActivity {
     }
 
     private void CalculateBMI() {
-
         float BMI = weight / (height * height);
         Intent intent = new Intent(RoutineActivity.this,ResultActivity.class);
         intent.putExtra("BMI",BMI);

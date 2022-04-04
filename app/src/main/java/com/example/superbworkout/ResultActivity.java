@@ -71,7 +71,7 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         Intent intent = getIntent();
 
-        float BMI  = Math.round((intent.getFloatExtra("BMI", 0) * 100) / 100);
+        float BMI  = intent.getFloatExtra("BMI", 0);
         String age_value = intent.getStringExtra("age");
 
         TextView your_bmi = findViewById(R.id.your_bmi);
@@ -89,12 +89,7 @@ public class ResultActivity extends AppCompatActivity {
         condition.setText(condition1.getCategory(BMI));
 
         Button recalculate = findViewById(R.id.recalculate);
-        recalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateUI();
-            }
-        });
+        recalculate.setOnClickListener(v -> updateUI());
 
     }
 

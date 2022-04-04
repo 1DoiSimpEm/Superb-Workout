@@ -210,7 +210,7 @@
                 android:fontFamily="casual"
                 android:text="Motivation to get a healthy life is below"
                 android:textColor="#EAD70C"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
